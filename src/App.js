@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Mensaje from "./mensajes";
 
+const Descripcion = () => {
+  return <p>Esta es una app </p>;
+};
 function App() {
+  const dia = new Date();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {dia + "Evaluacion en Jsx"}
+      <Descripcion></Descripcion>
+      <Mensaje color="red" message="Este Es un Curso de Reac"></Mensaje>
+      <dialog open>
+        <p>Greetings, one and all!</p>
+        <form method="dialog">
+          <button>OK</button>
+        </form>
+      </dialog>
     </div>
   );
 }
